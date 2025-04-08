@@ -6,12 +6,15 @@ export const BotonAleatorio = (props) => {
     return (
         <div className="custom-button mt-4 d-flex justify-content-center"> 
         <button className="jas" onClick={() => {
-            debugger
             const coloresPosibles = ["RedActivo", "orangeActivo", "greenActivo"];
-            const colorAleatorio = Math.floor(Math.random() * coloresPosibles.length) + 1;
-            props.nuevoAleatorio(colorAleatorio, coloresPosibles);
-            
-            
+            const nuevosColores = ["RedActivo", "orangeActivo", "greenActivo", "purpleActivo"];
+            const colorAleatorio = Math.floor(Math.random() * coloresPosibles.length);
+            debugger
+            if( props.nuevosColores.length >3){
+                props.nuevoAleatorio(colorAleatorio, nuevosColores);
+            }else{
+                props.nuevoAleatorio(colorAleatorio, coloresPosibles);
+            }
         }}
         >Presiona Aleatorio</button>
         </div>
