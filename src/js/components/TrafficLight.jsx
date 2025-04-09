@@ -18,7 +18,7 @@ const TrafficLight = (props) => {
 	const [colorpurple, setColorpurple] = useState("")
 
 	const addAleatorio = (thecolor, coloresPosibles) => {
-		
+		debugger
 		if(coloresPosibles.length>3){
 			setColores(coloresPosibles);
 			thecolor = Math.floor(Math.random() * 4);
@@ -42,6 +42,7 @@ const TrafficLight = (props) => {
 		<Semaforo 
 		// addEstado={enviarAlPadre} 
 		enviarSate={setColor}
+		enviarSatePuple={setColorpurple}
 		estadoRojo={color === "RedActivo" ? "RedActivo" : "RedNoActivo" } 
 		estadoNaranja={color === "orangeActivo" ? "orangeActivo" : "orangeNoActivo" } 
 		estadoVerde={color === "greenActivo" ? "greenActivo" : "greenNoActivo" } 

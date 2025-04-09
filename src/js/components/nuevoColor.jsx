@@ -8,11 +8,9 @@ export const NuevoColor = (props) => {
         <button onClick={ () => {
               const nuevosColores = ["RedActivo", "orangeActivo", "greenActivo", "purpleActivo"];
               const colorAleatorio =  Math.floor(Math.random() * 4);
-      
-             props.nuevoColor(colorAleatorio, nuevosColores);
+              props.nuevoColor(colorAleatorio, nuevosColores);
         }}>
-            
-            Nuevo color
+           Nuevo color
         </button>
         </div>
     )

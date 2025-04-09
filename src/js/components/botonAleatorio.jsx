@@ -9,7 +9,7 @@ export const BotonAleatorio = (props) => {
             const coloresPosibles = ["RedActivo", "orangeActivo", "greenActivo"];
             const nuevosColores = ["RedActivo", "orangeActivo", "greenActivo", "purpleActivo"];
             const colorAleatorio = Math.floor(Math.random() * coloresPosibles.length);
-            debugger
+            
             if( props.nuevosColores.length >3){
                 props.nuevoAleatorio(colorAleatorio, nuevosColores);
             }else{
